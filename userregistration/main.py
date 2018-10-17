@@ -30,11 +30,7 @@ def formSubmission():
             page += "Form submitted"
             return page
         else:
-            #return redirect('/form') --- How the book showed it
             page += helper.form.format(error = validator.validateUsername(username), username ='')
             return redirect(url_for('form'))
-
-
-
 
 app.run()
